@@ -41,17 +41,13 @@ namespace thietkethuattoan
             if (left < right)
             {
                 int pivot = Partition(arr, left, right);
-                Console.WriteLine("pivot: {0}", pivot);
-
                 if (pivot > 1)
                 {
-                    Console.WriteLine("left: {0}",left);
                     Quick_Sort(arr, left, pivot - 1);
                 }
                 if (pivot + 1 < right)
                 {
                     Quick_Sort(arr, pivot + 1, right);
-                    Console.WriteLine("pivot: {0}", pivot);
                 }
             }
 
@@ -61,11 +57,8 @@ namespace thietkethuattoan
             int pivot = arr[left];
             while (true)
             {
-                Console.WriteLine(arr[left]);
-                Console.WriteLine("pivot: {0}",pivot);
                 while (arr[left] < pivot)
                 {
-                    Console.WriteLine(arr[left]);
                     left++;
                 }
 
